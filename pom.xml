@@ -11,15 +11,15 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.hireme</groupId>
-    <artifactId>hireme-backend</artifactId>
+    <groupId>com.vendor-pulse</groupId>
+    <artifactId>vendor-pulse-backend</artifactId>
     <version>0.1.0</version>
-    <name>hireme-backend</name>
-    <description>HireMe Hourly Staffing Platform - Java/Spring Boot backend (Android client, tri-party model)</description>
+    <name>vendor-pulse-backend</name>
+    <description>Vendor Pulse Hourly Staffing Platform - Java/Spring Boot backend (Android client, tri-party model)</description>
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>25</java.version>
+        <java.version>21</java.version>
         <lombok.version>1.18.46</lombok.version>
         <postgresql.version>42.7.12</postgresql.version>
         <redisson.version>3.34.1</redisson.version>
