@@ -76,7 +76,7 @@ public class PaymentService {
      * service call so payments can be split into its own deployable later
      * without TimesheetService needing to change.
      */
-    @KafkaListener(topics = "timesheet.approved", groupId = "vendor-pulse-backend-payments")
+    @KafkaListener(topics = "timesheet.approved", groupId = "vendor-pulse-backend-app-payments")
     public void onTimesheetApproved(Map<String, Object> payload) {
         UUID timesheetId = UUID.fromString((String) payload.get("timesheetId"));
         try {

@@ -12,9 +12,9 @@
     </parent>
 
     <groupId>com.vendorpulse</groupId>
-    <artifactId>vendor-pulse-backend</artifactId>
+    <artifactId>vendor-pulse-backend-app</artifactId>
     <version>0.1.0</version>
-    <name>vendor-pulse-backend</name>
+    <name>vendor-pulse-backend-app</name>
     <description>Vendor Pulse Hourly Staffing Platform - Java/Spring Boot backend (Android client, tri-party model)</description>
     <packaging>jar</packaging>
 

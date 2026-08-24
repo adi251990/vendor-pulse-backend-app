@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: vendor-pulse-backend
+    name: vendor-pulse-backend-app
 
   datasource:
     url: jdbc:postgresql://${DB_HOST:localhost}:${DB_PORT:5432}/${DB_NAME:vendorpulse}
@@ -34,7 +34,7 @@ spring:
   kafka:
     bootstrap-servers: ${KAFKA_BOOTSTRAP:localhost:9092}
     consumer:
-      group-id: vendor-pulse-backend
+      group-id: vendor-pulse-backend-app
       auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
