@@ -2,9 +2,8 @@
 FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /workspace
 
-# Copy only files needed for dependency resolution first for better caching
-COPY pom.xml mvnw ./
-COPY .mvn .mvn
+# Copy pom.xml and source code
+COPY pom.xml ./
 COPY src ./src
 
 RUN mvn -B -DskipTests package
