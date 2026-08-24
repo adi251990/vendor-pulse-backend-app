@@ -25,7 +25,7 @@ This repository uses GitHub Actions to build and test on push/pull requests to `
 Maintainer: adi251990 (adi251990@gmail.com)
 # Vendor Pulse Backend
 
-Java 21 (LTS) / Spring Boot 3.3 backend for the Vendor Pulse hourly staffing platform
+Java 25 / Spring Boot 3.3 backend for the Vendor Pulse hourly staffing platform
 (tri-party model: **OWNER**=Vendor, **STAFF**=Worker, **ADMIN**=Platform
 Operator). Built as a REST API for an Android client.
 
