@@ -2,13 +2,9 @@ package com.vendorpulse.platform.booking.service;
 
 import com.vendorpulse.platform.config.MatchingProperties;
 import com.vendorpulse.platform.identity.entity.StaffProfile;
-import com.vendorpulse.platform.identity.repository.StaffProfileRepository;
 import com.vendorpulse.platform.shift.entity.Shift;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -17,11 +13,7 @@ import java.util.UUID;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@ExtendWith(MockitoExtension.class)
 class MatchingServiceTest {
-
-    @Mock
-    private StaffProfileRepository staffProfileRepository;
 
     private MatchingProperties matchingProperties;
     private MatchingService matchingService;
@@ -37,7 +29,7 @@ class MatchingServiceTest {
         weights.setReliability(0.15);
         matchingProperties.setWeights(weights);
 
-        matchingService = new MatchingService(staffProfileRepository, matchingProperties);
+        matchingService = new MatchingService(null, matchingProperties);
     }
 
     @Test
