@@ -3,36 +3,36 @@ version: "3.8"
 services:
   postgres:
     image: postgis/postgis:15-3.4
-    container_name: hireme-postgres
+    container_name: vendorpulse-postgres
     environment:
-      POSTGRES_DB: hireme
-      POSTGRES_USER: hireme
-      POSTGRES_PASSWORD: hireme
+      POSTGRES_DB: vendorpulse
+      POSTGRES_USER: vendorpulse
+      POSTGRES_PASSWORD: vendorpulse
     ports:
       - "5432:5432"
     volumes:
-      - hireme-pg-data:/var/lib/postgresql/data
+      - vendorpulse-pg-data:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U hireme"]
+      test: ["CMD-SHELL", "pg_isready -U vendorpulse"]
       interval: 5s
       timeout: 5s
       retries: 10
 
   redis:
     image: redis:7-alpine
-    container_name: hireme-redis
+    container_name: vendorpulse-redis
     ports:
       - "6379:6379"
 
   zookeeper:
     image: confluentinc/cp-zookeeper:7.6.1
-    container_name: hireme-zookeeper
+    container_name: vendorpulse-zookeeper
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
 
   kafka:
     image: confluentinc/cp-kafka:7.6.1
-    container_name: hireme-kafka
+    container_name: vendorpulse-kafka
     depends_on:
       - zookeeper
     ports:
@@ -44,4 +44,4 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
 
 volumes:
-  hireme-pg-data:
+  vendorpulse-pg-data:

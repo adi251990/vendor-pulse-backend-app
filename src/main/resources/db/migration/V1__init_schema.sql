@@ -1,4 +1,4 @@
--- HireMe platform initial schema
+-- Vendor Pulse platform initial schema
 CREATE EXTENSION IF NOT EXISTS postgis;
 CREATE EXTENSION IF NOT EXISTS pgcrypto; -- gen_random_uuid()
 

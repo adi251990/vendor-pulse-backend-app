@@ -23,13 +23,11 @@ This repository uses GitHub Actions to build and test on push/pull requests to `
 ## Contact
 
 Maintainer: adi251990 (adi251990@gmail.com)
-# HireMe Backend
+# Vendor Pulse Backend
 
-Java 25 / Spring Boot 3.3 backend for the HireMe hourly staffing platform
+Java 21 / Spring Boot 3.3 backend for the Vendor Pulse hourly staffing platform
 (tri-party model: **OWNER**=Vendor, **STAFF**=Worker, **ADMIN**=Platform
-Operator). Built as a REST API for an Android client. This implements the
-system spec discussed earlier in this conversation — see that document for
-the full design rationale; this README covers only how to run what's here.
+Operator). Built as a REST API for an Android client.
 
 ## Stack
 
@@ -40,7 +38,7 @@ springdoc-openapi.
 ## Project layout
 
 ```
-src/main/java/com/hireme/platform/
+src/main/java/com/vendorpulse/platform/
   identity/     users, vendors, staff profiles, JWT auth, RBAC
   shift/        shift CRUD + dynamic pricing engine
   booking/      claim (Redisson-locked) + matching/scoring

@@ -11,7 +11,7 @@
         <relativePath/>
     </parent>
 
-    <groupId>com.vendor-pulse</groupId>
+    <groupId>com.vendorpulse</groupId>
     <artifactId>vendor-pulse-backend</artifactId>
     <version>0.1.0</version>
     <name>vendor-pulse-backend</name>
