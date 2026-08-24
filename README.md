@@ -1,3 +1,28 @@
+# Vendor Pulse Backend App
+
+This repository contains the backend service for Vendor Pulse, a hiring platform.
+
+## Quick start
+
+- Build with Maven:
+
+```bash
+mvn -B -DskipTests package
+```
+
+- Run (after build):
+
+```bash
+java -jar target/*.jar
+```
+
+## CI
+
+This repository uses GitHub Actions to build and test on push/pull requests to `main`.
+
+## Contact
+
+Maintainer: adi251990 (adi251990@gmail.com)
 # HireMe Backend
 
 Java 25 / Spring Boot 3.3 backend for the HireMe hourly staffing platform
